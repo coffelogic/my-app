@@ -1,3 +1,5 @@
+'use client'
+
 import * as React from "react"
 
 import { Button } from "@/components/ui/button"
@@ -18,6 +20,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select"
+import { createPost } from "@/lib/post"
 
 export default function CardWithForm() {
   return (
@@ -53,7 +56,13 @@ export default function CardWithForm() {
         </CardContent>
         <CardFooter className="flex justify-between">
           <Button variant="outline">Cancel</Button>
-          <Button>Deploy</Button>
+          <Button
+            onClick={async () => {
+              await createPost()
+            }}
+          >
+              Deploy
+          </Button>
         </CardFooter>
       </Card>
     </div>
