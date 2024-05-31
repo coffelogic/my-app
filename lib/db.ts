@@ -1,3 +1,4 @@
+/* eslint-disable vars-on-top */
 /* eslint-disable no-var */
 import { PrismaClient } from '@prisma/client';
 
